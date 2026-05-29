@@ -1,6 +1,7 @@
-import heapq
-
-queue = []
-
-def add_patient(name, priority):
-    heapq.heappush(queue, (priority, name))
+def get_next_patient():
+    import heapq
+    
+    if len(queue) == 0:
+        return None
+    
+    return heapq.heappop(queue)
